@@ -16,16 +16,16 @@ var concat = require('gulp-concat');
 // gulp.task('myTask', function(){
 //   console.log('hello gulp');
 // });
-// gulp.task('build',function(){
-//   if (buildProduction) {
-//     gulp.start('minifyScripts');
-//   } else {
-//     gulp.start ('jsBrowserify');
-//   }
-// })
+gulp.task('build',function(){
+  if (buildProduction) {
+    gulp.start('minifyScripts');
+  } else {
+    gulp.start ('jsBrowserify');
+  }
+})
 
 gulp.task('concatInterface', function() {
-  return gulp.src(['./js/*.js'])
+  return gulp.src(['./js/*-interface.js'])
     .pipe(concat('allConcat.js'))
     .pipe(gulp.dest('./tmp'));
 });
