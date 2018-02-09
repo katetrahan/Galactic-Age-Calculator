@@ -1,5 +1,36 @@
 # _Super Galactic Age Calculator_
 
+## Planning
+
+1. Configuration/dependencies
+  * npm, gulp, bower
+  * defined in gulpfile/package.json
+  * npm = lets us run JS from the command licenses
+  * gulp = automates development tasks
+  * bower = frontend package manager
+
+2. Specs
+  * Spec 1: 'should convert a persons age into seconds', 24 years, 7.569e+8 seconds.
+  * Spec 2: 'should take inputted date and current date and determine the difference between the two dates', 9/15/1993, 24 years.
+
+3. Integration
+  * Initial routes or index pages with all dependencies in Controller/index.html head
+  * Template/html page for ...
+  * Template/html page for ...
+  * Template/html page for ... (one for each route/integrated user story)
+  * Display...
+  * Integrate feature that...
+
+4. UX/UI
+  * Include and modify bootstrap/materialize/Sass etc.
+  * Develop custom style
+
+5. Polish
+  * Refactor minor portion of...
+  * Delete unused...
+  * Make README awesome
+
+
 #### _An application that calculates the age of a user based on a planet's solar years._
 
 #### By _**Kate Trahan**_
