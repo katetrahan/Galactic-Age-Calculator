@@ -1,1 +1,52 @@
-!function(){return function e(r,t,n){function u(a,i){if(!t[a]){if(!r[a]){var c="function"==typeof require&&require;if(!i&&c)return c(a,!0);if(o)return o(a,!0);var f=new Error("Cannot find module '"+a+"'");throw f.code="MODULE_NOT_FOUND",f}var s=t[a]={exports:{}};r[a][0].call(s.exports,function(e){var t=r[a][1][e];return u(t||e)},s,s.exports,e,r,t,n)}return t[a].exports}for(var o="function"==typeof require&&require,a=0;a<n.length;a++)u(n[a]);return u}}()({1:[function(e,r,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(){function e(e,r){for(var t=0;t<r.length;t++){var n=r[t];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(r,t,n){return t&&e(r.prototype,t),n&&e(r,n),r}}();t.Year=function(){function e(r){!function(e,r){if(!(e instanceof r))throw new TypeError("Cannot call a class as a function")}(this,e),this.year=r}return n(e,[{key:"calculateAge",value:function(){var e=60*this.year*60*24*364.25;return e}}]),e}()},{}],2:[function(e,r,t){"use strict";var n=e("./../js/year.js");$(document).ready(function(){$("#birth-form").submit(function(e){e.preventDefault();var r=$("#age").val(),t=new n.Year(r).calculateAge(r);$("#seconds").text(t),$("#output").text(r)})})},{"./../js/year.js":1}]},{},[2]);
+(function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Year = exports.Year = function () {
+  function Year(year) {
+    _classCallCheck(this, Year);
+
+    this.year = year;
+  }
+
+  _createClass(Year, [{
+    key: "calculateAge",
+    value: function calculateAge() {
+      var secondsInMinute = 60;
+      var minutesInHour = 60;
+      var hoursInADay = 24;
+      var daysinAYear = 364.25;
+
+      var seconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear;
+      console.log(seconds);
+      return seconds;
+    }
+  }]);
+
+  return Year;
+}();
+
+},{}],2:[function(require,module,exports){
+'use strict';
+
+var _year = require('./../js/year.js');
+
+$(document).ready(function () {
+  $('#birth-form').submit(function (event) {
+    event.preventDefault();
+    var entry = $("#age").val();
+    var simpleDate = new _year.Year(entry);
+    var seconds = simpleDate.calculateAge(entry);
+    $("#seconds").text(seconds);
+    $("#output").text(entry);
+  });
+});
+
+},{"./../js/year.js":1}]},{},[2]);

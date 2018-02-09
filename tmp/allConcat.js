@@ -9,5 +9,5 @@ $(document).ready(function() {
     $("#seconds").text(seconds);
     $("#output").text(entry);
 
-  })
-})
+  });
+});
