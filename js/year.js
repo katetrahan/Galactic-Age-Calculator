@@ -47,6 +47,12 @@ export class Year {
     return marsYears;
   }
 
+  calculateJupiterAge() {
+    let jupYears = Math.round(this.year / 11.86);
+    console.log(jupYears);
+    return jupYears;
+  }
+
 
 
 }

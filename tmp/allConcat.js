@@ -8,9 +8,13 @@ $(document).ready(function() {
     var seconds = simpleDate.calculateAge(entry);
     var mercury = simpleDate.calculateMercuryAge(entry);
     var venus = simpleDate.calculateVenusAge(entry);
+    var mars = simpleDate.calculateMarsAge(entry);
+    var jupiter = simpleDate.calculateJupiterAge(entry);
     $("#seconds").text(seconds);
     $(".mercury").text(mercury);
     $(".venus").text(venus);
+    $(".mars").text(mars);
+    $(".jupiter").text(jupiter);
     $("#output").text(entry);
 
   });

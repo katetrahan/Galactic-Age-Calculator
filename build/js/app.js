@@ -61,6 +61,13 @@ var Year = exports.Year = function () {
       console.log(marsYears);
       return marsYears;
     }
+  }, {
+    key: "calculateJupiterAge",
+    value: function calculateJupiterAge() {
+      var jupYears = Math.round(this.year / 11.86);
+      console.log(jupYears);
+      return jupYears;
+    }
   }]);
 
   return Year;
@@ -79,9 +86,13 @@ $(document).ready(function () {
     var seconds = simpleDate.calculateAge(entry);
     var mercury = simpleDate.calculateMercuryAge(entry);
     var venus = simpleDate.calculateVenusAge(entry);
+    var mars = simpleDate.calculateMarsAge(entry);
+    var jupiter = simpleDate.calculateJupiterAge(entry);
     $("#seconds").text(seconds);
     $(".mercury").text(mercury);
     $(".venus").text(venus);
+    $(".mars").text(mars);
+    $(".jupiter").text(jupiter);
     $("#output").text(entry);
   });
 });

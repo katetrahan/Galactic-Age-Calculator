@@ -31,5 +31,11 @@ describe('Year' , function() {
     let year = 24;
     let sample = new Year(year);
     expect(sample.calculateMarsAge()).toEqual(Math.round(year / 1.88));
+  });
+
+  it('should return number of Jupiter Years', function() {
+    let year = 24;
+    let sample = new Year(year);
+    expect(sample.calculateJupiterAge()).toEqual(Math.round(year/ 11.86));
   })
 });
