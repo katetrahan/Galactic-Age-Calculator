@@ -1,4 +1,4 @@
-import { Year } from './..js/year.js';
+import { Year } from './../js/year.js';
 
 $(document).ready(function() {
   $('#birth-form').submit(function(event){
