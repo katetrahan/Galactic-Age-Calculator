@@ -31,16 +31,20 @@ var Year = exports.Year = function () {
   }, {
     key: "calculateMercuryAge",
     value: function calculateMercuryAge() {
-      var secondsInMinute = 60;
-      var minutesInHour = 60;
-      var hoursInADay = 24;
-      var daysinAYear = 364.25;
-
-      var mercurySeconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear * .24;
-      // return mercurySeconds;
-      var mercuryYears = Math.round(mercurySeconds * 0.0000000316887);
+      var mercuryYears = this.year / .24;
       console.log(mercuryYears);
       return mercuryYears;
+      // const secondsInMinute = 60;
+      // const minutesInHour =60;
+      // const hoursInADay =24;
+      // const daysinAYear =364.25;
+      //
+      // let mercurySeconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear * .24;
+      // // return mercurySeconds;
+      // let mercuryYears = Math.round(mercurySeconds * 0.0000000316887);
+      // console.log(mercuryYears);
+      // return mercuryYears;
+
     }
   }]);
 
