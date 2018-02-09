@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Space Calc</title>
   </head>
   <body>
-    <form id="birth-form">
-      <label for="date">Enter your age:</label>
-      <input id="age" type="number">
-      <button type="submit">Submit</button>
-    </form>
-    <div id="solution"></ul>
-      <p>Seconds:<span id="seconds"></span></p>
+    <div class="container">
+      <form id="birth-form">
+        <h2> Hello, carbon-based life form, please enter your age:</h2>
+        <label for="date">Enter your age:</label>
+        <input id="age" type="number">
+        <button class="btn-warning"type="submit">Submit</button>
+      </form>
+      <div id="solution"></ul>
+        <p>Seconds:<span id="seconds"></span></p>
+      </div>
+      <p>Age on Mercury(in years):<span class="mercury"></span></p>
+      <p>Age on Venus(in years):<span class="venus"></span></p>
+      <p>Age on Mars(in years):<span class="mars"></span></p>
+      <p>Age on Jupiter(in years):<span class="jupiter"></span></p>
+      <p>Age on Earth(in years):<span id="output"></span></p>
     </div>
-    <p>Age on Mercury(in years):<span class="mercury"></span></p>
-    <p>Age on Venus(in years):<span class="venus"></span></p>
-    <p>Age on Mars(in years):<span class="mars"></span></p>
-    <p>Age on Jupiter(in years):<span class="jupiter"></span></p>
-    <p>Your age:<span id="output"></span></p>
-
-
   </body>
 </html>
