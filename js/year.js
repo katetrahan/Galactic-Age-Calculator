@@ -35,7 +35,10 @@ export class Year {
 
   }
 
-  calculate
+  // calculateVenusAge() {
+  //   let venusYears = this.year / .62;
+  //   return venusYears
+  // }
 
 
 

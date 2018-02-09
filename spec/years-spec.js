@@ -17,6 +17,6 @@ describe('Year' , function() {
   it('should return number of Mercury Years', function() {
     let year = 24;
     let sample = new Year(year);
-    expect(sample.calculateMercuryAge()).toEqual((year * 60 * 60 * 24 * 364.25 * .24) * 0.0000000316887)
+    expect(sample.calculateMercuryAge()).toEqual(year / .24);
   })
 });
