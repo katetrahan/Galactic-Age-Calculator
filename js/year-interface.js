@@ -6,7 +6,9 @@ $(document).ready(function() {
     var entry = $("#age").val();
     var simpleDate = new Year(entry);
     var seconds = simpleDate.calculateAge(entry);
+    var mercury = simpleDate.calculateMercuryAge(entry);
     $("#seconds").text(seconds);
+    $(".mercury").text(mercury);
     $("#output").text(entry);
 
   });

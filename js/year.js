@@ -4,29 +4,33 @@ export class Year {
 
   }
 
-calculateAge() {
-  const secondsInMinute = 60;
-  const minutesInHour =60;
-  const hoursInADay =24;
-  const daysinAYear =364.25;
+  calculateAge() {
+    const secondsInMinute = 60;
+    const minutesInHour =60;
+    const hoursInADay =24;
+    const daysinAYear =364.25;
 
-  let seconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear; // turns years into seconds
-    console.log(seconds);
-    return seconds;
+    let seconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear; // turns years into seconds
+      console.log(seconds);
+      return seconds;
+
+    }
+
+  calculateMercuryAge() {
+    const secondsInMinute = 60;
+    const minutesInHour =60;
+    const hoursInADay =24;
+    const daysinAYear =364.25;
+
+    let mercurySeconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear * .24;
+    // return mercurySeconds;
+    let mercuryYears = Math.round(mercurySeconds * 0.0000000316887);
+    console.log(mercuryYears);
+    return mercuryYears;
+
+
 
   }
-
-calculateMercuryAge() {
-  const secondsInMinute = 60; 
-  const minutesInHour =60;
-  const hoursInADay =24;
-  const daysinAYear =364.25;
-
-  let mercurySeconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear * .24;
-  return mercurySeconds
-
-
-}
 
 
 

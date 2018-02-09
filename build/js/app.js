@@ -24,9 +24,23 @@ var Year = exports.Year = function () {
       var hoursInADay = 24;
       var daysinAYear = 364.25;
 
-      var seconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear;
+      var seconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear; // turns years into seconds
       console.log(seconds);
       return seconds;
+    }
+  }, {
+    key: "calculateMercuryAge",
+    value: function calculateMercuryAge() {
+      var secondsInMinute = 60;
+      var minutesInHour = 60;
+      var hoursInADay = 24;
+      var daysinAYear = 364.25;
+
+      var mercurySeconds = this.year * secondsInMinute * minutesInHour * hoursInADay * daysinAYear * .24;
+      // return mercurySeconds;
+      var mercuryYears = Math.round(mercurySeconds * 0.0000000316887);
+      console.log(mercuryYears);
+      return mercuryYears;
     }
   }]);
 
@@ -44,7 +58,9 @@ $(document).ready(function () {
     var entry = $("#age").val();
     var simpleDate = new _year.Year(entry);
     var seconds = simpleDate.calculateAge(entry);
+    var mercury = simpleDate.calculateMercuryAge(entry);
     $("#seconds").text(seconds);
+    $(".mercury").text(mercury);
     $("#output").text(entry);
   });
 });
