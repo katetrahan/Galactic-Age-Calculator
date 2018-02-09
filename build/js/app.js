@@ -31,9 +31,11 @@ var Year = exports.Year = function () {
   }, {
     key: "calculateMercuryAge",
     value: function calculateMercuryAge() {
-      var mercuryYears = this.year / .24;
+      var mercuryYears = Math.round(this.year / .24);
       console.log(mercuryYears);
       return mercuryYears;
+
+      // math is wrong :(
       // const secondsInMinute = 60;
       // const minutesInHour =60;
       // const hoursInADay =24;
@@ -44,7 +46,20 @@ var Year = exports.Year = function () {
       // let mercuryYears = Math.round(mercurySeconds * 0.0000000316887);
       // console.log(mercuryYears);
       // return mercuryYears;
-
+    }
+  }, {
+    key: "calculateVenusAge",
+    value: function calculateVenusAge() {
+      var venusYears = Math.round(this.year / .62);
+      console.log(venusYears);
+      return venusYears;
+    }
+  }, {
+    key: "calculateMarsAge",
+    value: function calculateMarsAge() {
+      var marsYears = Math.round(this.year / 1.88);
+      console.log(marsYears);
+      return marsYears;
     }
   }]);
 
@@ -63,8 +78,10 @@ $(document).ready(function () {
     var simpleDate = new _year.Year(entry);
     var seconds = simpleDate.calculateAge(entry);
     var mercury = simpleDate.calculateMercuryAge(entry);
+    var venus = simpleDate.calculateVenusAge(entry);
     $("#seconds").text(seconds);
     $(".mercury").text(mercury);
+    $(".venus").text(venus);
     $("#output").text(entry);
   });
 });

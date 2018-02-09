@@ -18,5 +18,18 @@ describe('Year' , function() {
     let year = 24;
     let sample = new Year(year);
     expect(sample.calculateMercuryAge()).toEqual(year / .24);
+  });
+
+  it('should return number of Venus Years', function() {
+    let year = 24;
+    let sample = new Year(year);
+    expect(sample.calculateVenusAge()).toEqual(Math.round(year / .62));
+    expect(sample.calculateVenusAge()).not.toEqual(24);
+  });
+
+  it('should return number of Mars Years', function() {
+    let year = 24;
+    let sample = new Year(year);
+    expect(sample.calculateMarsAge()).toEqual(Math.round(year / 1.88));
   })
 });

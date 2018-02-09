@@ -17,7 +17,7 @@ export class Year {
     }
 
   calculateMercuryAge() {
-    let mercuryYears = this.year / .24;
+    let mercuryYears = Math.round(this.year / .24);
     console.log(mercuryYears);
     return mercuryYears;
 
@@ -35,10 +35,17 @@ export class Year {
 
   }
 
-  // calculateVenusAge() {
-  //   let venusYears = this.year / .62;
-  //   return venusYears
-  // }
+  calculateVenusAge() {
+    let venusYears = Math.round(this.year / .62);
+    console.log(venusYears);
+    return venusYears;
+  }
+
+  calculateMarsAge() {
+    let marsYears = Math.round(this.year / 1.88);
+    console.log(marsYears);
+    return marsYears;
+  }
 
 
 
