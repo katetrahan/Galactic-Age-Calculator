@@ -1,10 +1,12 @@
-import { Year } from './.js/year.js';
+import { Year } from './..js/year.js';
 
 $(document).ready(function() {
   $('#birth-form').submit(function(event){
     event.preventDefault();
-    var entry = $("#date").val();
-    var simpleDate = new Year(entry);
-    
+    // var simpleDate = new year();
+    var seconds = simpleDate.calculateAge();
+    $("#seconds").text(seconds);
+    $("#output").text("hello");
+
   })
 })

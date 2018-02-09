@@ -13,16 +13,16 @@ var concat = require('gulp-concat');
 
 
 
-gulp.task('myTask', function(){
-  console.log('hello gulp');
-});
-gulp.task('build',function(){
-  if (buildProduction) {
-    gulp.start('minifyScripts');
-  } else {
-    gulp.start ('jsBrowserify');
-  }
-})
+// gulp.task('myTask', function(){
+//   console.log('hello gulp');
+// });
+// gulp.task('build',function(){
+//   if (buildProduction) {
+//     gulp.start('minifyScripts');
+//   } else {
+//     gulp.start ('jsBrowserify');
+//   }
+// })
 
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*.js'])
@@ -50,13 +50,6 @@ gulp.task("minifyScripts", ["jsBrowserify"], function(){
   return gulp.src("./build/js/app.js")
     .pipe(uglify())
     .pipe(gulp.dest("./build/js"));
-});
-gulp.task("build", function(){
-  if (buildProduction) {
-    gulp.start('minifyScripts');
-  } else {
-    gulp.start('jsBrowserify');
-  }
 });
 gulp.task("clean", function(){
   return del(['build', 'tmp']);
