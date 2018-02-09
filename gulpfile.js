@@ -7,6 +7,7 @@ var utilities = require('gulp-util');
 var buildProduction = utilities.env.production;
 var del = require('del');
 var jshint = require('gulp-jshint');
+var concat = require('gulp-concat');
 
 
 
@@ -23,14 +24,20 @@ gulp.task('build',function(){
   }
 })
 
-gulp.task('jsBrowserify', function() {
-  return browserify({ entries: ['./js/year-interface.js'] })
-    .bundle()
-    .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'));
+gulp.task('concatInterface', function() {
+  return gulp.src(['./js/*.js'])
+    .pipe(concat('allConcat.js'))
+    .pipe(gulp.dest('./tmp'));
 });
 
-gulp.task('jsBrowserify', function() {
+// gulp.task('jsBrowserify', function() {
+//   return browserify({ entries: ['./js/year-interface.js'] })
+//     .bundle()
+//     .pipe(source('app.js'))
+//     .pipe(gulp.dest('./build/js'));
+// });
+
+gulp.task('jsBrowserify',['concatInterface'], function() {
   return browserify({ entries: ['./tmp/allConcat.js']})
     .transform(babelify.configure({
       presets: ["es2015"]
