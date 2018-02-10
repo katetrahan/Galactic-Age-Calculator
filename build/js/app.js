@@ -68,6 +68,18 @@ var Year = exports.Year = function () {
       console.log(jupYears);
       return jupYears;
     }
+  }, {
+    key: "calulateEarthLifeExpectancy",
+    value: function calulateEarthLifeExpectancy() {
+      var earthLifeExpectancy = 71 - this.year;
+      return earthLifeExpectancy;
+    }
+  }, {
+    key: "calculateMercuryAge",
+    value: function calculateMercuryAge() {
+      var averageLifeOnMercury = Math.round(this.year / .62);
+      var mercuryLifeExpectancy = this.year - averageLifeOnMercury;
+    }
   }]);
 
   return Year;
@@ -88,12 +100,14 @@ $(document).ready(function () {
     var venus = simpleDate.calculateVenusAge(entry);
     var mars = simpleDate.calculateMarsAge(entry);
     var jupiter = simpleDate.calculateJupiterAge(entry);
+    var lifeLeftOnEarth = simpleDate.calulateEarthLifeExpectancy(entry);
     $("#seconds").text(seconds);
     $(".mercury").text(mercury);
     $(".venus").text(venus);
     $(".mars").text(mars);
     $(".jupiter").text(jupiter);
     $("#output").text(entry);
+    $('.earthleft').text(lifeLeftOnEarth);
   });
 });
 

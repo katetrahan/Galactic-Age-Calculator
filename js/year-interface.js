@@ -10,12 +10,14 @@ $(document).ready(function() {
     var venus = simpleDate.calculateVenusAge(entry);
     var mars = simpleDate.calculateMarsAge(entry);
     var jupiter = simpleDate.calculateJupiterAge(entry);
+    var lifeLeftOnEarth =simpleDate.calulateEarthLifeExpectancy(entry);
     $("#seconds").text(seconds);
     $(".mercury").text(mercury);
     $(".venus").text(venus);
     $(".mars").text(mars);
     $(".jupiter").text(jupiter);
     $("#output").text(entry);
+    $('.earthleft').text(lifeLeftOnEarth);
 
   });
 });

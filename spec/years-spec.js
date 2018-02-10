@@ -17,7 +17,7 @@ describe('Year' , function() {
   it('should return number of Mercury Years', function() {
     let year = 24;
     let sample = new Year(year);
-    expect(sample.calculateMercuryAge()).toEqual(year / .24);
+    expect(sample.calculateMercuryAge()).toEqual(Math.round(year / .24));
   });
 
   it('should return number of Venus Years', function() {
@@ -37,5 +37,11 @@ describe('Year' , function() {
     let year = 24;
     let sample = new Year(year);
     expect(sample.calculateJupiterAge()).toEqual(Math.round(year/ 11.86));
+  });
+
+  it('should return years left on earth', function() {
+    let year = 24;
+    let sample = new Year(year);
+    expect(sample.calulateEarthLifeExpectancy()).toEqual(Math.round(71 - year))
   })
 });

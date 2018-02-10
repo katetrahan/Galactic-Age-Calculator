@@ -53,6 +53,16 @@ export class Year {
     return jupYears;
   }
 
+  calulateEarthLifeExpectancy() {
+    let earthLifeExpectancy = 71 - this.year;
+    return earthLifeExpectancy
+  }
+
+  calculateMercuryAge() {
+    const averageLifeOnMercury = Math.round(this.year / .62);
+    let mercuryLifeExpectancy = this.year - averageLifeOnMercury;
+  }
+
 
 
 }
