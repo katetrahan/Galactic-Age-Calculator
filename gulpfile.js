@@ -8,6 +8,7 @@ var buildProduction = utilities.env.production;
 var del = require('del');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
+var browserSync = require('browser-sync').create();
 // var lib = require('bower-files')();
 var lib = require('bower-files')({
   "overrides":{
@@ -93,4 +94,22 @@ gulp.task('build', ['clean'], function(){
     gulp.start('jsBrowserify');
   }
   gulp.start('bower');
+});
+gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
+  browserSync.reload();
+});
+gulp.task('bowerBuild', ['bower'], function(){
+  browserSync.reload();
+});
+gulp.task('serve', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./",
+      index: "index.html"
+    }
+  });
+   gulp.watch(['js/*.js'], ['jsBuild']);
+   gulp.watch(['bower.json'], ['bowerBuild']);
+
+
 });

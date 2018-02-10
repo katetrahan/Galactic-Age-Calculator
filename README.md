@@ -2,33 +2,21 @@
 
 ## Planning
 
-1. Configuration/dependencies
+Configuration/dependencies
   * npm, gulp, bower
   * defined in gulpfile/package.json
   * npm = lets us run JS from the command licenses
   * gulp = automates development tasks
   * bower = frontend package manager
 
-2. Specs
+Specs
   * Spec 1: 'should convert a persons age into seconds', 24 years, 7.569e+8 seconds.
-  * Spec 2: 'should take inputted date and current date and determine the difference between the two dates', 9/15/1993, 24 years.
+  * Spec 2: 'should convert earth year to mercury year', 24 years, 100 years.
+  * Spec 3: 'should convert earth year to venus year', 24 years, 39 years.
+  * Spec 4: 'should convert earth year to mars year', 24 years, 12 years.
+  * Spec 5: 'should convert earth year to jupiter year', 24 years, 2 years.
+  * Spec 6:
 
-3. Integration
-  * Initial routes or index pages with all dependencies in Controller/index.html head
-  * Template/html page for ...
-  * Template/html page for ...
-  * Template/html page for ... (one for each route/integrated user story)
-  * Display...
-  * Integrate feature that...
-
-4. UX/UI
-  * Include and modify bootstrap/materialize/Sass etc.
-  * Develop custom style
-
-5. Polish
-  * Refactor minor portion of...
-  * Delete unused...
-  * Make README awesome
 
 
 #### _An application that calculates the age of a user based on a planet's solar years._
@@ -56,6 +44,13 @@ _This is an application that uses JavaScript to take the age of a carbon based l
 | **Converts life expectancy on Earth to life expectancy on Mars** | "72 years" | "x years" |
 | **Converts life expectancy on Earth to life expectancy on Jupiter** | "72 years" | "x years" |
 | **Determine how many years the user has to live based on life expectancy subtracted form current years** | "x years life expected on mars - current year" | "years left to live" |
+
+## Functionality to be included in the future
+* _Find out how old your favorite celebrities are on different planets_
+* _Create an app that tells you happy birthday on your planet birthdays_
+* _Let you connect to Facebook and type in your friends birthdays to tell them happy birthday on different planets(will not notify users like FB..because that gets annoying)_
+
+
 
 
 ## Setup/Installation Requirements
