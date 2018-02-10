@@ -58,7 +58,7 @@ export class Year {
     return earthLifeExpectancy
   }
 
-  calculateMercuryAge() {
+  calculateLifeExpectancyonMercury() {
     const averageLifeOnMercury = Math.round(this.year / .62);
     let mercuryLifeExpectancy = this.year - averageLifeOnMercury;
   }

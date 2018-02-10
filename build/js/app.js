@@ -75,8 +75,8 @@ var Year = exports.Year = function () {
       return earthLifeExpectancy;
     }
   }, {
-    key: "calculateMercuryAge",
-    value: function calculateMercuryAge() {
+    key: "calculateLifeExpectancyonMercury",
+    value: function calculateLifeExpectancyonMercury() {
       var averageLifeOnMercury = Math.round(this.year / .62);
       var mercuryLifeExpectancy = this.year - averageLifeOnMercury;
     }
